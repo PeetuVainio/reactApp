@@ -9,7 +9,7 @@ const ToDoList = ({toDoList, handleToggle, handleFilter}) => {
                     <ToDo todo={todo} handleToggle={handleToggle} handleFilter={handleFilter}/>
                 )
             })}
-            <button style={{margin: '20px'}} onClick={handleFilter}>Remove completed</button>
+            <button className="poistaNappi" style={{margin: '20px'}} onClick={handleFilter}>Remove selected task</button>
         </div>
     );
 };

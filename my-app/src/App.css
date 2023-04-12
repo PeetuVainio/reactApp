@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(53, 53, 190);
+}
+
 .App {
   text-align: center;
 }
@@ -6,9 +10,39 @@
   width: 70px;
   height: 35px;
   font-size: 15px;
+  border: none;
+  background-color: grey;
+  transition: transform .06s;
+}
+
+.addNappi:active {
+transform: scale(.9);
 }
 
 .lisaaTask {
   width: 250px;
-  height: 30px;
+  height: 33px;
+  border: none;
+  font-size: 15px;
+}
+
+.todo {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+.strike {
+  text-decoration: line-through;
+}
+
+.poistaNappi {
+  padding: 3px;
+  font-size: 15px;
+  border: none;
+  background-color: white;
+  transition: transform .06s;
+}
+
+.poistaNappi:active {
+transform: scale(.9);
 }

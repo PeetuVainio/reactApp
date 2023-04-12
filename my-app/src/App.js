@@ -31,9 +31,11 @@ function App() {
 
   return (  
     <div className="App">
+      <body>
       <Header />
       <ToDoForm addTask={addTask}/>
       <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
+      </body>
     </div>
   );
 }
