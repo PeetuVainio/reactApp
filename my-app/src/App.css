@@ -2,47 +2,86 @@ body {
   background-color: rgb(53, 53, 190);
 }
 
-.App {
+h1 {
   text-align: center;
 }
 
-.addNappi {
-  width: 70px;
-  height: 35px;
-  font-size: 15px;
-  border: none;
-  background-color: grey;
-  transition: transform .06s;
+#todo-list {
+  width: 500px;
+  margin: 60px auto;
 }
 
-.addNappi:active {
-transform: scale(.9);
-}
-
-.lisaaTask {
-  width: 250px;
-  height: 33px;
-  border: none;
-  font-size: 15px;
+form {
+  padding: 10px 20px;
+  margin-bottom: 10px;
 }
 
 .todo {
-  cursor: pointer;
-  font-size: 20px;
-  color: white;
-}
-.strike {
-  text-decoration: line-through;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.652);
 }
 
-.poistaNappi {
-  padding: 3px;
-  font-size: 15px;
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+form input {
+  padding: 4px 8px;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-size: 16px;
+  background-color: grey;
+  color: black;
   border: none;
-  background-color: white;
+  padding: 8px 16px;
+  cursor: pointer;
   transition: transform .06s;
 }
 
-.poistaNappi:active {
-transform: scale(.9);
+button:active {
+  transform: scale(.9);
+}
+
+button:focus {
+  outline: 0;
+}
+
+input[type='teksti']
+.todo input[type="checkbox"] {
+  transform: scale(1.8) translateY(1px);
+  margin: 0 16px 0 0;
+  cursor: pointer;
+}
+
+.todoTeksti input {
+  padding: 4px;
+}
+
+.todoTeksti {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.todo-completed {
+  display: flex;
+  margin: 10px 0;
+}
+
+.todoActions {
+  display: flex;
+  justify-content: space-between;
 }
