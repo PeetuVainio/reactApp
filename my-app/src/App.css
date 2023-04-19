@@ -75,7 +75,7 @@ input[type='teksti']
   margin-bottom: 16px;
   display: flex;
   align-items: center;
-  cursor: pointer;
+  word-break: break-all;
 }
 
 .todo-completed {

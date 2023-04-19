@@ -75,7 +75,7 @@ const App = () => {
             <input
               type="checkbox"
               id="completed"
-              checked={todo.completed}
+              checked={todo.completed} 
               onChange={() => toggleComplete(todo.id)}
             />
             {todo.id === todoEditing ? (
