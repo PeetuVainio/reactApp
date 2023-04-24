@@ -63,7 +63,8 @@ const App = () => {
       <h1>To Do Lista</h1>
       <form onSubmit={handleSubmit}>
         <input
-          type="teksti"
+          type="text"
+          className="teksti"
           onChange={(e) => setTodo(e.target.value)}
           value={todo}
         />
@@ -71,16 +72,18 @@ const App = () => {
       </form>
       {todos.map((todo) => (
         <div key={todo.id} className="todo">
-          <div className="todoTeksti">
+          <div className="todoTeksti"
+          style={{textDecoration: todo.completed ? "line-through" : ""}}>
             <input
               type="checkbox"
               id="completed"
+              className="yliViivaus"
               checked={todo.completed} 
               onChange={() => toggleComplete(todo.id)}
             />
             {todo.id === todoEditing ? (
               <input
-                type="teksti"
+                type="text"
                 onChange={(e) => setEditingText(e.target.value)}
               />
             ) : (
