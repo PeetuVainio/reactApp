@@ -57,7 +57,7 @@ const App = () => {
     setTodos(updatedTodos);
     setTodoEditing(null);
   }
-
+  
   return (
     <div id="todo-list">
       <h1>To Do Lista</h1>
@@ -70,6 +70,9 @@ const App = () => {
         />
         <button type="submit">Lisää Tehtävä</button>
       </form>
+        <form>
+          <button type="submit">Poista Kaikki</button>
+        </form>
       {todos.map((todo) => (
         <div key={todo.id} className="todo">
           <div className="todoTeksti"
