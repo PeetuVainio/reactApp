@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-const App = () => {
+const App = () => { //muuttujia
   const [todos, setTodos] = React.useState([]);
   const [todo, setTodo] = React.useState("");
   const [todoEditing, setTodoEditing] = React.useState(null);
@@ -20,26 +20,33 @@ const App = () => {
     localStorage.setItem("todos", json);
   }, [todos]);
 
-  function handleSubmit(e) {
+  function handleSubmit(e) { //functio uusien todojen lisäämiselle
     e.preventDefault();
 
     const newTodo = {
-      id: new Date().getTime(),
-      text: todo,
-      completed: false,
+      id: new Date().getTime(), //ottaa id:n ajan perustteella
+      text: todo, //teksti on nimetty koodissa "todo"
+      completed: false, //checkbox on itsestään "not checked"
     };
-    setTodos([...todos].concat(newTodo));
-    setTodo("");
+
+    var x = document.forms["errMsg"]["name1"].value; //error message jos tietoa ei ole lisätty
+    if (x === "" || x === null) {
+      alert("Lisää Tieto!!!!");
+      return false;
+    } else {
+      setTodos([...todos].concat(newTodo)); //jos tieto on lisätty, se tulee sivustolle
+      setTodo("");
+    }
   }
 
-  function deleteTodo(id) {
+  function deleteTodo(id) { //functio poistamiselle
     let updatedTodos = [...todos].filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
   }
 
-  function toggleComplete(id) {
+  function toggleComplete(id) { //functio checkboxille
     let updatedTodos = [...todos].map((todo) => {
-      if (todo.id === id) {
+      if (todo.id === id) { // jos checkbox on checkattu, teksti yliviivautuu
         todo.completed = !todo.completed;
       }
       return todo;
@@ -47,7 +54,7 @@ const App = () => {
     setTodos(updatedTodos);
   }
 
-  function submitEdits(id) {
+  function submitEdits(id) { //functio edittaukselle
     const updatedTodos = [...todos].map((todo) => {
       if (todo.id === id) {
         todo.text = editingText;
@@ -61,12 +68,14 @@ const App = () => {
   return (
     <div id="todo-list">
       <h1>To Do Lista</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}
+      name="errMsg">
         <input
           type="text"
           className="teksti"
           onChange={(e) => setTodo(e.target.value)}
           value={todo}
+          name="name1"
         />
         <button type="submit">Lisää Tehtävä</button>
       </form>
@@ -104,11 +113,7 @@ const App = () => {
           </div>
         </div>
       ))}
-      <div class="d-flex flex-column justify-content-center w-100 h-100">
-      <div class="d-flex flex-column justify-content-center align-items-center">
       </div>
-      </div>
-    </div>
   );
 };
 
