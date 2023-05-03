@@ -64,7 +64,7 @@ const App = () => { //muuttujia
     setTodos(updatedTodos);
     setTodoEditing(null);
   }
-  
+
   return (
     <div id="todo-list">
       <h1>To Do Lista</h1>
@@ -108,7 +108,6 @@ const App = () => { //muuttujia
             ) : (
               <button onClick={() => setTodoEditing(todo.id)}>Muokkaa</button>
             )}
-
             <button onClick={() => deleteTodo(todo.id)}>Poista</button>
           </div>
         </div>
