@@ -5,6 +5,7 @@
 
 ### Lähteet
 -Stack overflow  
+-W3Schools
 -https://dev.to/joelynn/how-to-build-a-react-crud-todo-app-delete-todo-3jl1  
 -https://codesandbox.io/s/react-todo-list-add-delete-checkbox-bthfs?file=/src/index.js  
 
