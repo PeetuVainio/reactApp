@@ -23,14 +23,14 @@ const App = () => { //muuttujia
   function handleSubmit(e) { //functio uusien todojen lisäämiselle
     e.preventDefault();
 
-    const newTodo = {
-      id: new Date().getTime(), //ottaa id:n ajan perustteella
-      text: todo, //teksti on nimetty koodissa "todo"
+    const newTodo = { //Kun tekee uuden todon, siihen tulee id, text joka on määritetty todoksi ja checkbox on itsestään poissa päältä
+      id: new Date().getTime(),
+      text: todo,
       completed: false, //checkbox on itsestään "not checked"
     };
 
     var x = document.forms["errMsg"]["name1"].value; //error message jos tietoa ei ole lisätty
-    if (x === "" || x === null) {
+    if (x === "" || x === null) { // estää enterin spämmäämisen todojen lisäämiseksi.
       alert("Lisää Tieto!!!!");
       return false;
     } else {
@@ -45,8 +45,8 @@ const App = () => { //muuttujia
   }
 
   function toggleComplete(id) { //functio checkboxille
-    let updatedTodos = [...todos].map((todo) => {
-      if (todo.id === id) { // jos checkbox on checkattu, teksti yliviivautuu
+    let updatedTodos = [...todos].map((todo) => { // jos checkbox on checkattu, teksti yliviivautuu
+      if (todo.id === id) {
         todo.completed = !todo.completed;
       }
       return todo;
