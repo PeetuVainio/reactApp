@@ -7,6 +7,8 @@
 
 ## Lopputulos
 
+![image](https://github.com/PeetuVainio/reactApp/assets/113332683/cf12a647-1a53-4a02-9fea-4ff34045e523)
+
 
 ### Lähteet
 -Stack overflow  
