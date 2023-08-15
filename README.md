@@ -1,5 +1,7 @@
 # 12.4.2023 To Do List projekti  
 
+## Tehtävänä oli tehdä To-Do lista, johon pystyy lisäämään tietoa, poistamaan tietoa, päivittämään tietoa ja merkitä tiedon tehdyksi.
+
 ## Rautalankamalli
 ![image](https://github.com/PeetuVainio/reactApp/assets/113332683/66304eab-b787-4098-8d02-f8fc31fe5999)  
 
